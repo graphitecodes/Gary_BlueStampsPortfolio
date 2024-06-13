@@ -1,7 +1,7 @@
 Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Each of the legs provides the robot with additional stability that allows it to move even if one or two of the arms are then impaired.
 
-<!--You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML -->
+<!--You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
+```HTML 
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
 ```
