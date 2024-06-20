@@ -12,7 +12,7 @@ Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Ea
 
 <!--**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
-![Headstone Image](Gary_P.heic)
+![Headstone Image](Gary_P.jpg)
   
 # Final Milestone
 
