@@ -47,14 +47,38 @@ Here's where you'll put your code. The syntax below places it into a block of co
 -->
 ```c++
 void setup() {
-  // put your setup code here, to run once:
+  // Start Freenove Hexapod Robot with default function
+  robot.Start(true); //starting communications with the remote.
+  pinMode(ledPin, OUTPUT);      // declare LED as output
+  pinMode(inputPin, INPUT);     // declare sensor as input
   Serial.begin(9600);
-  Serial.println("Hello World!");
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Update Freenove Hexapod Robot
+  robot.Update();
 
+   val = digitalRead(inputPin);  // read input value
+  if (val == HIGH) {            // check if the input is HIGH
+    
+    digitalWrite(ledPin, HIGH);  // turn LED ON
+    if (pirState == LOW) {
+      // we have just turned on
+      Serial.println("Motion detected!");
+      robot.communication.robotAction.ChangeBodyHeight(0);
+      // We only want to print on the output change, not state
+      pirState = HIGH;
+    }
+  } else {
+    digitalWrite(ledPin, LOW); // turn LED OFF
+    if (pirState == HIGH){
+      // we have just turned of
+      Serial.println("Motion ended!");
+      robot.communication.robotAction.ChangeBodyHeight(45);
+      // We only want to print on the output change, not state
+      pirState = LOW;
+    }
+  }
 }
 ```
 
