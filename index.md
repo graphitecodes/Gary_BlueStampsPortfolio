@@ -46,40 +46,176 @@ Made by Gary Pan in Procreate on iPad.
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 -->
 ```c++
+#ifndef ARDUINO_AVR_MEGA2560
+#error Wrong board. Please choose "Arduino/Genuino Mega or Mega 2560"
+#endif
+
+// Include FNHR (Freenove Hexapod Robot) library
+#include <FNHR.h>
+#include <AsyncSonarLib.h>
+#include <YetAnotherPcInt.h>
+void ping ( AsyncSonar & pizza)
+{
+  pizza.Start();
+  Serial.println(pizza.GetMeasureMM());
+}
+
+void timeOut (AsyncSonar & burger)
+{
+  burger.Start();
+  //Serial.println("time out");
+  
+}
+
+
+
+FNHR robot;
+int ledPin = 13;                /* choose the pin for the LED, 
+                                  for trouble shooting and to know if the code is working or not*/
+int inputPin = 14;               // choose the input pin (for PIR sensor)
+int pirState = LOW;             // we start, assuming no motion detected, will be changed to high if motion.
+int val = 0;                    // variable for reading the pin status
+int echoPin = 3;
+int trigPinX = 2 ;
+int trigPinY = 15;
+int sensor = 0;
+unsigned long startTime ; 
+float dX, dY, durFinX, durFinY; //dX and dY are distance, durFinX and durFinY are duration.
+bool received = false;
+unsigned long endTime;
+
+void pulsePin (int pinNumber)
+{
+  digitalWrite (pinNumber , LOW);
+  delayMicroseconds(2);  
+	digitalWrite(pinNumber, HIGH);  
+	delayMicroseconds(100);  
+	digitalWrite(pinNumber, LOW);  
+
+}
+
+void pinChange ()
+{
+  endTime = micros();
+  received = true;
+
+
+}
+
+
 void setup() {
   // Start Freenove Hexapod Robot with default function
   robot.Start(true); //starting communications with the remote.
-  pinMode(ledPin, OUTPUT);      // declare LED as output
-  pinMode(inputPin, INPUT);     // declare sensor as input
   Serial.begin(9600);
+  pinMode (3, INPUT);
+  attachInterrupt(digitalPinToInterrupt (3), pinChange , FALLING );
+  startTime = micros();
+  pinMode (trigPinX , OUTPUT);
+  pinMode (trigPinY, OUTPUT);
+  pulsePin (trigPinX);
+
 }
+
+
 
 void loop() {
   // Update Freenove Hexapod Robot
-  robot.Update();
+  if (micros() - startTime > 1000000)
+  {
+    startTime = micros();
+    if (sensor == 0 )
+    {
+      sensor = 1;
+      pulsePin(trigPinY);
+    }
+    else
+    {
+      sensor = 0;
+      pulsePin(trigPinX);
+    }
 
-   val = digitalRead(inputPin);  // read input value
-  if (val == HIGH) {            // check if the input is HIGH
+  }
+  
+  if (received)
+  {
+    received = false;
+      unsigned long flightTime = endTime - startTime;
+    float distance = flightTime * 0.00343 * 0.5;
+    if (sensor == 0 )
+    {
+    dX = distance;
+    sensor = 1;
+    }
+    else
+    {
+      dY = distance;
+      sensor = 0;
+    }
     
-    digitalWrite(ledPin, HIGH);  // turn LED ON
-    if (pirState == LOW) {
+    startTime = micros();
+
+    if (sensor == 0 )
+    {
+      pulsePin (trigPinX);
+    }
+    else
+    {
+      pulsePin (trigPinY);
+    }
+
+  }
+  
+
+  robot.Update();
+  Serial.print(dX);
+  Serial.print (" ");
+  Serial.println (dY);
+  val = digitalRead(inputPin);  // read input value
+  if (dY > 10 )
+  {
+    robot.communication.robotAction.CrawlBackward();
+  }
+  else if (dX  > 10 )
+  {
+    robot.communication.robotAction.CrawlForward();
+    robot.Update();
+    delay (30);
+        
+  }
+  else
+  {
+    robot.communication.robotAction.TurnLeft();
+    robot.Update();
+    delay(30); 
+  }
+
+
+
+  if (val == HIGH) 
+  {            // check if the input is HIGH
+    if (pirState == LOW) // motion is detetected.
+    {
       // we have just turned on
       Serial.println("Motion detected!");
-      robot.communication.robotAction.ChangeBodyHeight(0);
+      //robot.communication.robotAction.ChangeBodyHeight(0);
       // We only want to print on the output change, not state
       pirState = HIGH;
+
     }
-  } else {
-    digitalWrite(ledPin, LOW); // turn LED OFF
-    if (pirState == HIGH){
+  } 
+  else 
+  {
+    if (pirState == HIGH) // motion is not detected
+    {
       // we have just turned of
       Serial.println("Motion ended!");
-      robot.communication.robotAction.ChangeBodyHeight(45);
+      robot.communication.robotAction.ChangeBodyHeight(25);
       // We only want to print on the output change, not state
-      pirState = LOW;
+      pirState = LOW;  
+      }
     }
+
   }
-}
 ```
 
 # Bill of Materials
