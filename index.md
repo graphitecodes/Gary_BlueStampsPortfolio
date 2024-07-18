@@ -15,6 +15,10 @@ Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Ea
 ![Headstone Image](Gary_P.jpg)
   
 
+# Modification Milestone
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u9YD_LMF-fo?si=vXxKAwIAkD-301Wz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+For my modification and last milestone, I wanted to create a robot that is able to move automatically with code. How I achieved this was through the usage of two ultrasonic sensors and also a PIR sensor to detect objects from above. How the ultrasonic sensor works is that one of the sensors sends out an ultrasonic pulse which is a sound wave that travels through air and is unable to be heard by human beings. Once the sound wave, which travels at 343 meters per second, bounces on an object we can use code running on the arduino to first calculuate
 
 
 # Third Milestone
@@ -225,6 +229,9 @@ Don't forget to place the link of where to buy each component inside the quotati
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Freenove Hexapod| Building my project | $126.95 | <a href="https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN"> Link </a> |
+| PIR Sensors | Detecting objects | $126.95 | <a href="[https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN](https://www.amazon.com/HiLetgo-HC-SR501-Infrared-Sensor-Arduino/dp/B07KZW86YR/ref=sr_1_4?crid=2UHC46JG653YL&dib=eyJ2IjoiMSJ9.SFLyIt4v7U8RZAmLTnQ8m9Iv3rwsGcChAgzU56SE3X8KMasvwaX5KA3Hv0XHB279L-fTrEAwPhxCXp4ZsRnpMmncXow7fh2_JWL95h5MWqIOGq8qH4xskA1m4rUqEuh8WGBj8OFm9Rkwx5QsgUHVqaA7k36qw2EUqmL-p1SSCPQlcM5B00lc6pN8qyngBv6ER5z8TXKSa9GowpMGy_8jf63CoaegoCUojE6537fV-lqwNeZ8fQ88zOQ9ttCveRcoFVRmEDCnsjrPC5DaF5qesrwFVb9HpatqTFZxaAro7Ys.oZWRj-YqTyUPpOSfkA9YyARlJf83rwDz-b7MThpwJOc&dib_tag=se&keywords=pir+sensor+adafruit&qid=1721329380&sprefix=pir+sensor+adafr%2Caps%2C173&sr=8-4)"> Link </a> |
+| Freenove Hexapod| Building my project | $126.95 | <a href="https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN"> Link </a> |
+
 
 <!--
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
