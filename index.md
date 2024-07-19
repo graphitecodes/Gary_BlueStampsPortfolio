@@ -5,6 +5,9 @@ Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Ea
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
 
+# i love pizza
+# pineapple belongs on pizza 
+# pizza is awesome
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
