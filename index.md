@@ -14,7 +14,7 @@ Hexapod Project: This hexapod project is a robot that has 6 legs. Each of the le
 
 ![Headstone Image](Gary_P.jpg)
 
-#Challenges Faced
+# Challenges Faced
 For each of my milestones, I've faced key challenges that impeded and also hindered the process of my project. The most challenging of my challenges were for my modifications, I was unsure of my initial modification going out of my third milestone, but after a while I was suggested by Ben to use ultrasonic sensors after I told him of an idea
 
 # Modification Milestone
