@@ -31,7 +31,15 @@ For my modification and last milestone, I wanted to create a robot that is able 
 The ultrasonic sensors, allows the robot to engage the amount of distance that is being travelled, allowing the robot to decide whether to move forward, backwards or even turn left. After this, the PIR sensor is able to detect if there are any motion and with this motion, it decides to either make the robot move up or move down in orientation. With all the code combined the robot is able to move freely and without restrictions.
 
 # 3d Print CAD
+![CAD](3d1.png)
+![CAD](3d2.png)
+![CAD](3d3.png)
 
+#FlowChart
+
+Made on LucidCharts
+
+![FlowChart](Flowchart.png)
 
 # Third Milestone
 
