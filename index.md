@@ -1,14 +1,10 @@
-Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Each of the legs provides the robot with additional stability that allows it to move even if one or two of the arms are then impaired.
+Hexapod Project: This hexapod project is a robot that has 6 legs. Each of the legs provides the robot with additional stability that allows it to move even if one or two of the arms are then impaired. It is able to move with a remote control and the 6 legs are driven by 18 different servo motors that control where the legs move, the legs' orientiations, and also the height of the leg.
 
 <!--You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:-->
 
 <!--- This is an HTML comment in Markdown -->
 <!--- Anything between these symbols will not render on the published site -->
 
-# i love pizza
-# pineapple belongs on pizza 
-# pizza is awesome
-# you shall not pass, do not look any further
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -17,12 +13,16 @@ Hexapod Project: This hexapod project is meant to be a robot that has 6 legs. Ea
 <!--**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**-->
 
 ![Headstone Image](Gary_P.jpg)
-  
+
+#Challenges Faced
+For each of my milestones, I've faced key challenges that impeded and also hindered the process of my project. The most challenging of my challenges were for my modifications, I was unsure of my initial modification going out of my third milestone, but after a while I was suggested by Ben to use ultrasonic sensors after I told him of an idea
 
 # Modification Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u9YD_LMF-fo?si=vXxKAwIAkD-301Wz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-For my modification and last milestone, I wanted to create a robot that is able to move automatically with code. How I achieved this was through the usage of two ultrasonic sensors and also a PIR sensor to detect objects from above. How the ultrasonic sensor works is that one of the sensors sends out an ultrasonic pulse which is a sound wave that travels through air and is unable to be heard by human beings. Once the sound wave, which travels at 343 meters per second, bounces on an object we can use code running on the arduino to first calculuate
+For my modification and last milestone, I wanted to create a robot that is able to move automatically with code. How I achieved this was through the usage of two ultrasonic sensors and also a PIR sensor to detect objects from above. How the ultrasonic sensor works is that one of the sensors sends out an ultrasonic pulse which is a sound wave that travels through air and is unable to be heard by human beings. Once the sound wave, which travels at 343 meters per second, bounces on an object we can use code running on the arduino to first calculate the time that it took for the wave to travel and then used code to calculate the distance. The distance is then used to see if the robot can move forward or not. Finally the PIR sensor detects light through its globe which all gets concentrated, this allows the sensor to detect any movement throughout the project. 
+
+The ultrasonic sensors, allows the robot to engage the amount of distance that is being travelled, allowing the robot to decide whether to move forward, backwards or even turn left. After this, the PIR sensor is able to detect if there are any motion and with this motion, it decides to either make the robot move up or move down in orientation. With all the code combined the robot is able to move freely and without restrictions.
 
 
 # Third Milestone
@@ -233,8 +233,10 @@ Don't forget to place the link of where to buy each component inside the quotati
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
 | Freenove Hexapod| Building my project | $126.95 | <a href="https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN"> Link </a> |
-| PIR Sensors | Detecting movement | $8.49| <a href="[https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN](https://www.amazon.com/HiLetgo-HC-SR501-Infrared-Sensor-Arduino/dp/B07KZW86YR/ref=sr_1_4?crid=2UHC46JG653YL&dib=eyJ2IjoiMSJ9.SFLyIt4v7U8RZAmLTnQ8m9Iv3rwsGcChAgzU56SE3X8KMasvwaX5KA3Hv0XHB279L-fTrEAwPhxCXp4ZsRnpMmncXow7fh2_JWL95h5MWqIOGq8qH4xskA1m4rUqEuh8WGBj8OFm9Rkwx5QsgUHVqaA7k36qw2EUqmL-p1SSCPQlcM5B00lc6pN8qyngBv6ER5z8TXKSa9GowpMGy_8jf63CoaegoCUojE6537fV-lqwNeZ8fQ88zOQ9ttCveRcoFVRmEDCnsjrPC5DaF5qesrwFVb9HpatqTFZxaAro7Ys.oZWRj-YqTyUPpOSfkA9YyARlJf83rwDz-b7MThpwJOc&dib_tag=se&keywords=pir+sensor+adafruit&qid=1721329380&sprefix=pir+sensor+adafr%2Caps%2C173&sr=8-4)"> Link </a> |
-| Ultrasonic Sensors | Detecting Objects | $9.19 | <a href="[https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN](https://www.amazon.com/HiLetgo-HC-SR04-Ultrasonic-Distance-MEGA2560/dp/B00E87VXH0)"> Link </a> |
+
+| PIR Sensors | Detecting movement | $8.49| <a href="https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN](https://www.amazon.com/HiLetgo-HC-SR501-Infrared-Sensor-Arduino/dp/B07KZW86YR/ref=sr_1_4?crid=2UHC46JG653YL&dib=eyJ2IjoiMSJ9.SFLyIt4v7U8RZAmLTnQ8m9Iv3rwsGcChAgzU56SE3X8KMasvwaX5KA3Hv0XHB279L-fTrEAwPhxCXp4ZsRnpMmncXow7fh2_JWL95h5MWqIOGq8qH4xskA1m4rUqEuh8WGBj8OFm9Rkwx5QsgUHVqaA7k36qw2EUqmL-p1SSCPQlcM5B00lc6pN8qyngBv6ER5z8TXKSa9GowpMGy_8jf63CoaegoCUojE6537fV-lqwNeZ8fQ88zOQ9ttCveRcoFVRmEDCnsjrPC5DaF5qesrwFVb9HpatqTFZxaAro7Ys.oZWRj-YqTyUPpOSfkA9YyARlJf83rwDz-b7MThpwJOc&dib_tag=se&keywords=pir+sensor+adafruit&qid=1721329380&sprefix=pir+sensor+adafr%2Caps%2C173&sr=8-4)"> Link </a> |
+
+| Ultrasonic Sensors | Detecting Objects | $9.19 | <a href="https://www.amazon.com/Freenove-Raspberry-Crawling-Detailed-Tutorial/dp/B07FLVZ2DN](https://www.amazon.com/HiLetgo-HC-SR04-Ultrasonic-Distance-MEGA2560/dp/B00E87VXH0)](https://www.amazon.com/HiLetgo-HC-SR04-Ultrasonic-Distance-MEGA2560/dp/B00E87VXH0)"> Link </a> |
 
 
 <!--
