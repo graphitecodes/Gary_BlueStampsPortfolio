@@ -53,8 +53,13 @@ For my first milestone, I've assembled everything that I needed to assemble, but
 
 
 # Schematics 
-Made by Gary Pan in Procreate on iPad.
+Pre Modifications Made by Gary Pan in Procreate on iPad.
+
 ![Headstone Image](Schematics.jpg)
+
+After Modifications
+
+
 <!--# Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 -->
@@ -230,6 +235,8 @@ void loop() {
 
   }
 ```
+
+
 
 # Bill of Materials
 <!--Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
